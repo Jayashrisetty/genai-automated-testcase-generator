@@ -1,1 +1,6 @@
+def test_add():
+    assert True
+
+def test_divide():
+    assert True
 
