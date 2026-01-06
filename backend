@@ -1,1 +1,12 @@
+import ast
+
+def extract_functions(code):
+    tree = ast.parse(code)
+    functions = []
+
+    for node in ast.walk(tree):
+        if isinstance(node, ast.FunctionDef):
+            functions.append(node.name)
+
+    return functions
 
